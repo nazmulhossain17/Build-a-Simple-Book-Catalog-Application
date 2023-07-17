@@ -3,25 +3,23 @@ import {Link} from 'react-router-dom';
 import { useContext, useState } from 'react';
 import {AuthContext} from '../../context/AuthProvider';
 
-interface FormData {
-    email: string;
-    password: string;
-  }
+const Login = () => {
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [loginError, setLoginError] = useState('');
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const { logIn } = useContext(AuthContext);
   
-  const Login: React.FC = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm<FormData>();
-    const { createUser } = useContext(AuthContext);
-  
-    const handleLogin = handleSubmit((data: FormData) => {
-      createUser(data.email, data.password)
+    const handleLogin = data => {
+      console.log(data);
+      logIn(data.email, data.password)
         .then(result => {
           const user = result.user;
           console.log(user);
+          setLoginUserEmail(data.email);
         })
-        .catch(error => {
-          console.log(error.message);
-        });
-    });
+        .catch(error => console.log(error));
+        setLoginError(error.message)
+    };
     return (
         <>
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
@@ -76,6 +74,9 @@ interface FormData {
                 {errors.password && <p className='text-red-600' role="alert">{errors.password?.message}</p>}
               </div>
             </div>
+            <div>
+            {loginError && <p className='text-red-600'>{loginError}</p>}
+            </div>
 
             <div className="flex items-center mb-6 -mt-4">
               <div className="flex ml-auto">
@@ -85,7 +86,7 @@ interface FormData {
 
             <div className="flex w-full">
               <button type="submit" className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-blue-600 hover:bg-blue-700 rounded py-2 w-full transition duration-150 ease-in">
-                <span className="mr-2 uppercase">Login</span>
+                <span className="mr-2 uppercase">Sign In</span>
                 <span>
                   <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
