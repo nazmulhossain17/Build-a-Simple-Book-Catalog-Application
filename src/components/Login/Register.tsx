@@ -1,6 +1,6 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
     return (
         <>
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
@@ -17,6 +17,23 @@ const Login = () => {
         </div>
         <div className="mt-10">
           <form action="#">
+          <div className="flex flex-col mb-6">
+  <label htmlFor="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Your Name</label>
+  <div className="relative">
+    <div className="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
+      <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+        <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+      </svg>
+    </div>
+    <input
+      id="name"
+      type="text"
+      name="name"
+      className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+      placeholder="Your Name"
+    />
+  </div>
+</div>
             <div className="flex flex-col mb-6">
               <label htmlFor="email" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
               <div className="relative">
@@ -73,13 +90,13 @@ const Login = () => {
           </form>
         </div>
         <div className="flex justify-center items-center mt-6">
-          <Link to="/register" className="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">
+          <Link to="/login" className="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">
             <span>
               <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
               </svg>
             </span>
-            <span className="ml-2">Don't have an account?</span>
+            <span className="ml-2">Already have an account?</span>
           </Link>
         </div>
       </div>
@@ -88,4 +105,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
