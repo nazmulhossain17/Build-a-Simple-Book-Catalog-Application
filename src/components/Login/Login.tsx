@@ -1,6 +1,27 @@
+import { useForm } from 'react-hook-form';
 import {Link} from 'react-router-dom';
+import { useContext, useState } from 'react';
+import {AuthContext} from '../../context/AuthProvider';
 
-const Login = () => {
+interface FormData {
+    email: string;
+    password: string;
+  }
+  
+  const Login: React.FC = () => {
+    const { register, formState: { errors }, handleSubmit } = useForm<FormData>();
+    const { createUser } = useContext(AuthContext);
+  
+    const handleLogin = handleSubmit((data: FormData) => {
+      createUser(data.email, data.password)
+        .then(result => {
+          const user = result.user;
+          console.log(user);
+        })
+        .catch(error => {
+          console.log(error.message);
+        });
+    });
     return (
         <>
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
@@ -8,7 +29,7 @@ const Login = () => {
         <div className="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">Login To Your Account</div>
         <button className="relative mt-6 border rounded-md py-2 text-sm text-gray-800 bg-gray-100 hover:bg-gray-200">
           <span className="absolute left-0 top-0 flex items-center justify-center h-full w-10 text-blue-500"><i className="fab fa-facebook-f"></i></span>
-          <span>Login with Facebook</span>
+          <span>Login with Google</span>
         </button>
         <div className="relative mt-10 h-px bg-gray-300">
           <div className="absolute left-0 top-0 flex justify-center w-full -mt-2">
@@ -16,7 +37,7 @@ const Login = () => {
           </div>
         </div>
         <div className="mt-10">
-          <form action="#">
+          <form onSubmit={handleSubmit(handleLogin)}>
             <div className="flex flex-col mb-6">
               <label htmlFor="email" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">E-Mail Address:</label>
               <div className="relative">
@@ -25,13 +46,14 @@ const Login = () => {
                     <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                   </svg>
                 </div>
-                <input
+                <input {...register("email", {required: "Email Address is required"})} 
                   id="email"
                   type="email"
                   name="email"
                   className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
                   placeholder="E-Mail Address"
                 />
+                {errors.email && <p className='text-red-600' role="alert">{errors.email?.message}</p>}
               </div>
             </div>
             <div className="flex flex-col mb-6">
@@ -44,13 +66,14 @@ const Login = () => {
                     </svg>
                   </span>
                 </div>
-                <input
+                <input {...register("password",{required: "Password is required",minLength: {value: 8, message: "Password must be 8 characters or longer"}})}
                   id="password"
                   type="password"
                   name="password"
                   className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
                   placeholder="Password"
                 />
+                {errors.password && <p className='text-red-600' role="alert">{errors.password?.message}</p>}
               </div>
             </div>
 

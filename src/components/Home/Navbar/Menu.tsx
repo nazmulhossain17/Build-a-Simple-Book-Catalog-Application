@@ -8,17 +8,17 @@ const Menu = () => {
       >
         Home
       </Link>
+      <Link
+        to="/books"
+        className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
+      >
+        Books
+      </Link>
       <a
         href="#"
         className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
       >
-        Features
-      </a>
-      <a
-        href="#"
-        className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
-      >
-        Pricing
+        About
       </a>
       <a
         href="#"

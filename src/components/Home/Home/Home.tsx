@@ -1,10 +1,10 @@
+import Hero from "../Hero/Hero";
 
 
 const Home = () => {
     return (
         <>
-            
-            <p>Hi</p>
+            <Hero/>
         </>
     );
 };

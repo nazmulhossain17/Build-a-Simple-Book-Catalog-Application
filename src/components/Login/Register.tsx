@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 const Register = () => {
+    const { register,formState: { errors }, handleSubmit } = useForm()
+    const handleRegister = data=>{
+        console.log(data)
+    }
     return (
         <>
             <div className="min-h-screen flex flex-col items-center justify-center bg-gray-300">
@@ -16,7 +21,7 @@ const Register = () => {
           </div>
         </div>
         <div className="mt-10">
-          <form action="#">
+          <form onSubmit={handleSubmit(handleRegister)}>
           <div className="flex flex-col mb-6">
   <label htmlFor="name" className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600">Your Name</label>
   <div className="relative">
@@ -26,12 +31,14 @@ const Register = () => {
       </svg>
     </div>
     <input
-      id="name"
-      type="text"
-      name="name"
-      className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
-      placeholder="Your Name"
-    />
+        {...register("name", { required: "Name is required" })}
+        id="name"
+        type="text"
+        name="name"
+        className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
+        placeholder="Your Name"
+      />
+      {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
   </div>
 </div>
             <div className="flex flex-col mb-6">
@@ -42,7 +49,7 @@ const Register = () => {
                     <path d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                   </svg>
                 </div>
-                <input
+                <input {...register("email", {required: "Email Address is required"})} 
                   id="email"
                   type="email"
                   name="email"
@@ -61,7 +68,7 @@ const Register = () => {
                     </svg>
                   </span>
                 </div>
-                <input
+                <input {...register("password",{required: "Password is required",minLength: {value: 8, message: "Password must be 8 characters or longer"}})}
                   id="password"
                   type="password"
                   name="password"
