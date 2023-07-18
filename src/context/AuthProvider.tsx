@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useState, useEffect } from 'react';
-import { createUserWithEmailAndPassword, Auth, getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, Auth, getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 
 interface AuthContextType {
@@ -22,6 +22,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
+
 
   const logIn = (email: string, password: string) =>{
     setLoading(true);

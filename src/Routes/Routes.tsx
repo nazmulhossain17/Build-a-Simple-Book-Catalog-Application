@@ -3,7 +3,7 @@ import Main from '../Layout/Main';
 import Home from '../components/Home/Home/Home';
 import Login from '../components/Login/Login';
 import Register from '../components/Login/Register';
-import Books from '../components/Books/Books';
+import  Book  from '../components/Book/Book';
 
 const router = createBrowserRouter([
     {
@@ -16,8 +16,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/books',
-                element: <Books></Books>
-            },
+                element: <Book />,
+                loader: () => fetch('data.json').then((response) => response.json()), // Load data from data.json
+              },
             {
                 path: '/login',
                 element: <Login></Login>

@@ -1,0 +1,83 @@
+[
+    {
+      "_id": 1,
+      "name": "The Line of Beauty",
+      "image": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077209.jpg",
+      "author": "Alan Hollinghurst",
+      "des": "This Booker Prize-winning novel bottles the essence of the 1980s, as the story follows a quest for beauty against a backdrop of politics, greed and friendships turned toxic. When twenty-year-old Nick Guest moves into an attic room in the Notting Hill home of the wealthy Feddens he is innocent of politics and money. But as he is swept up into the Feddens’ world, Nick must confront the collisions between his own desires, and a world he can never truly belong to. Alan Hollinghurst’s writing style is both stripped back and poetic, and its sensitivity makes this book a true standout.",
+      "status": true,
+      "rating": 4
+    },
+    {
+      "_id": 2,
+      "name": "White Noise",
+      "image": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077261.jpg",
+      "author": "Don DeLillo",
+      "des": "Jack Gladney is the creator and chairman of Hitler studies at the College-on-the-Hill. This is the story of his absurd life; a life that is going well enough, until a chemical spill from a train carriage releases an ‘Airborne Toxic Event’ and Jack is forced to confront his biggest fear – his own mortality. The combination of social satire and metaphysical dilemma that Don DeLillo uses to expose our rampant consumerism and media saturation makes White Noise an unmissable work of modern fiction.",
+      "status": true,
+      "rating": 3
+    },
+    {
+      "_id": 3,
+      "name": "A Little Life",
+      "image": "https://m.media-amazon.com/images/I/91YZIKXZ+bL._AC_UF1000,1000_QL80_.jpg",
+      "author": "Hanya Yanagihara",
+      "des": "Shortlisted for the Booker Prize and celebrated as ‘the great gay novel’, Hanya Yanagihara’s immensely powerful story of brotherly love and the limits of human endurance has had a visceral impact on many a reader. Willem, Jude, Malcolm and JB meet at college in Massachusetts and form a firm friendship, moving to New York upon graduation. Over the years their friendships deepen and darken as they celebrate successes and face failures, but their greatest challenge is Jude himself – an increasingly broken man scarred by an unspeakable childhood. This is a book that will stay with you long after the last page.",
+      "status": true,
+      "rating": 5
+    },
+    {
+      "_id": 4,
+      "name": "The Adventures of Sherlock Holmes",
+      "image": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781909621732.jpg",
+      "author": "Arthur Conan Doyle",
+      "des": "The Adventures of Sherlock Holmes is perhaps the greatest collection of detective stories ever written. From his residence at 221B Baker Street, Sherlock Holmes solves a series of baffling and bizarre cases, including those of a man terrified by the arrival of an envelope containing orange pips, and a woman whose fiancé disappeared on his way to their wedding. Each story showcases the great detective's inimitable and extraordinary deductive powers, recounted to us by his faithful friend and colleague, Dr Watson.",
+      "status": true,
+      "rating": 2
+    },
+    {
+      "_id": 5,
+      "name": "Don Quixote",
+      "image": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781509844760.jpg",
+      "author": "Miguel de Cervantes",
+      "des": "Cervantes’s satirical observation of the human condition is classed as Europe’s first ‘modern’ novel and has sold over 500 million copies since it was first published in the early seventeenth-century. It follows Don Quixote and Sancho Panza – one of the original comedy duos – as they journey through sixteenth-century Spain in search of adventure. They face spirits, evil enchanters and giants in a quest to perform acts of valour worthy of Dulcinea, his lady love. Cervantes's words have made an impact across the globe with the book celebrating its 400th anniversary in 2005.",
+      "status": true,
+      "rating": 4
+    },
+    {
+      "_id": 6,
+      "name": "Zone One",
+      "image": "https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/de8fbecf-a5b9-455e-aa6a-68c80c9fad2e/Zone%20One%20book%20cover.jpg?w=270&h=415&auto=format&bg=%23efefef&fit=crop",
+      "author": "Colson Whitehead",
+      "des": "Pulitzer Prize-winning novelist Colson Whitehead was inspired to write this apocalyptic sci-fi novel because of his teenage fascination with the work of Stephen King and Issac Asimov. A plague has ravaged the planet, and the population is divided into the living and the living dead. Mark Spitz is working on a task force to clear the infested from ‘Zone One’. He undertakes the mundane mission of malfunctioning zombie removal, the rigours of Post-Apocalypic Stress Disorder all while attempting to come to terms with a fallen world. But little does Mark Spitz know, things will quickly turn from bad to worse.",
+      "status": true,
+      "rating": 5
+    },
+    {
+      "_id": 7,
+      "name": "The Shining",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1353277730i/11588.jpg",
+      "author": "Stephen King",
+      "des": "The master of suspense must be included in any list of books you should read in a lifetime. That’s why you’ll find Stephen King’s The Shining here. Brought to life in cinematic perfection by Jack Nicholson, Jack Torrance is a middle-aged man looking for a fresh start. He thinks he’s found it when he lands a job as the off-season caretaker at an idyllic old hotel, the Overlook. But as snow piles higher outside, the secluded location begins to feel more confining and sinister, less freeing and more provoking. Horror fans, take note: This is one of the scariest and best Stephen King books of all time.",
+      "status": true,
+      "rating": 5
+    },
+    {
+      "_id": 8,
+      "name": "The Inevitable",
+      "image": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1453057334i/27209431.jpg",
+      "author": "Kevin Kelly",
+      "des": "From one of our leading technology thinkers and writers, a guide through the twelve technological imperatives that will shape the next thirty years and transform our lives Much of what will happen in the next thirty years is inevitable, driven by technological trends that are already in motion. In this fascinating, provocative new book, Kevin Kelly provides an optimistic road map for the future, showing how the coming changes in our lives—from virtual reality in the home to an on-demand economy to artificial intelligence embedded in everything we manufacture—can be understood as the result of a few long-term, accelerating forces. Kelly both describes these deep trends—interacting, cognifying, flowing, screening, accessing, sharing, filtering, remixing, tracking, and questioning—and demonstrates how they overlap and are codependent on one another.",
+      "status": true,
+      "rating": 5
+    },
+    {
+      "_id": 9,
+      "name": "You Look Like a Thing and I Love You",
+      "image": "https://m.media-amazon.com/images/I/41jZOx6QXZL._SX355_BO1,204,203,200_.jpg",
+      "author": "Janelle Shane",
+      "des": "nyone with even a passing interest in artificial intelligence will get a kick out of this book, as it delves into machine learning algorithms and their limitations in an accessible, engaging, and often hilarious way. Shane is the research scientist behind the comical AI Weirdness blog, and she does a solid job of demystifying AI, explaining how machine learning really works, and highlighting its strengths and weaknesses. Although you’ll learn about things like Generative Adversarial Networks, the book never gets dull thanks to witty and moreish writing peppered with practical examples of AI attempts at creativity that are frequently laugh-out-loud funny.",
+      "status": true,
+      "rating": 5
+    }
+  ]
